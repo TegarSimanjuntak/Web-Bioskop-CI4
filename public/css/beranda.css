@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav a {
+  text-decoration: none;
+  border-bottom: none;
+  color: black;
+}
+
+body.dark-theme nav a {
+  text-decoration: none;
+  border-bottom: none;
+  color: white;
+}
+
+body.dark-theme nav {
+  background-color: #1a1a1a;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+body.dark-theme .popup {
+  color: black; 
+}
+body.dark-theme .overlay {
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust overlay color in dark mode */
+}
+.ikon-person-container {
+  margin-left: 10px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.ikon_person {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+}
+
+.lingkaran {
+  width: 25px;
+  height: 25px;
+  background-color: #033251;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: greenyellow;
+  border-color: greenyellow;
+}
+
+input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked::before {
+  left: calc(100% - 16px);
+}
+
+#themeToggle {
+  margin-top: 24px;
+}
+
+.DoaIbuAtas {
+  margin-left: 10px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.tema {
+  display: flex;
+}
+
+.pencarian  {
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  margin: auto;
+}
+form{
+  margin: auto;
+}
+.pencarian:hover {
+  border-color: #2980b9;
+}
+
+.pencarian:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  /* Set the maximum width of the popup */
+  filter: blur(0); /* Set initial blur to 0 */
+  transition: filter 0.3s ease-in-out; /* Add transition for smooth blur effect */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Background overlay for the blur effect */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(5px);
+  /* Apply a blur effect */
+}
+
+.beranda,
+.contact,
+.login {
+  margin-right: 2%;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+.Showing {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+  left: -22px;
+}
+
+.wrapper i:last-child {
+  right: -22px;
+}
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 700px;
+  width: auto;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: calc(100% / 3);
+}
+button[name="submit"] {
+  background-color: #007BFF; 
+  color: #fff; 
+  padding: 12px 24px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+button[name="submit"]:hover {
+  background-color: #0056b3; 
+}
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: auto;
+    height: 500px;
+  }
+}
+
+

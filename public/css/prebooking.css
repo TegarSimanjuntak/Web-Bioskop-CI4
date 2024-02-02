@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    background-color: white; /* Light theme background color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out; /* Add transition effect for smooth color change */
+}
+body.dark-theme nav {
+    background-color: #1a1a1a; /* Dark theme background color */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1); /* Adjust box shadow for dark theme */
+}
+.ikon-person-container {
+    margin-left: 40px;
+    position: relative;
+    margin-right: 20px;
+}
+.ikon_person {
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+}
+.lingkaran {
+    width: 25px;
+    height: 25px;
+    background-color: #033251;
+    border-radius: 50%;
+    position: absolute;
+    margin-bottom: 10px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: greenyellow;
+    border-color: greenyellow;
+}
+
+input[type="checkbox"]::before {
+    content: ''; 
+    position: absolute;
+    width: 14px; 
+    height: 14px; 
+    background-color: #fff; 
+    border: 2px solid #333; 
+    border-radius: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+input[type="checkbox"]:checked::before {
+    left: calc(100% - 16px);
+}
+
+#themeToggle{
+    margin-top: 24px;
+}
+.DoaIbuAtas{
+    margin-left: 10px;
+    margin-right: 50px;
+}
+.tema{
+    display: flex;
+    margin-right: 80px;
+}
+.pencarian {
+    padding: 10px;
+    border: 2px solid #3498db; 
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-left: 140px;
+}
+.pencarian:hover {
+    border-color: #2980b9; 
+}
+.pencarian:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+} 
+.beranda,.contact{
+    margin-left: 150px;
+    text-decoration: none;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: black;
+  }
+.header {
+    display: flex;
+    position: relative;
+}
+.header_gambar {
+    width: 100%;
+    height: 750px;
+    filter: brightness(50%);
+    object-fit: cover;
+    object-position: center;
+}
+.judulFilmHeader {
+    position: absolute;
+    top: 100px;
+    right: 430px;
+    color: white;
+    font-size: 40px;
+}
+.gambar_kecil {
+    transform: scale(0.5);
+    position: absolute;
+    margin-left: -60px;
+    top: -40px;
+}
+.informasi_film {
+    position: absolute;
+    top: 300px;
+    color: white;
+    margin-left: 728px;
+    margin-right: 50px;
+}
+.ikon_play {
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 400px;
+    transform: scale(0.4);
+}
+.tulisan_trailer {
+    position: absolute;
+    color: white;
+    right: 500px;
+    bottom: 90px;
+}
+button {
+    margin: 60px;
+    width: 120px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+button:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #fd0000;
+}
+.jadwal_jadwal {
+    margin-left: 80px;
+}
+footer {
+    margin-bottom: -40px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+}
+.Available_seats{
+    display: flex;
+}
+.seats{
+    display: flex;
+}
+.pop_up_jumlah_kursi{
+    display: none;
+    background-color: white;
+    margin: auto;
+    width: 500px;
+    height: 350px;
+    top: 200px;
+    left: 475px;
+    position: absolute;
+    border-radius: 30px;
+}
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+.konten_pop_up{
+    margin-left: 20px;
+}
+.isi_body.popup-active {
+    pointer-events: none;
+}
+#tambah_kursi{
+    margin-left: -200px;
+}
+#jumlah_kursi{
+    border: 2px solid #3498db; 
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+    height: 40px;
+    width: 100px;
+    margin-top: 68px;
+}
+.tulisan_number{
+    margin-top: 60px;
+}
+.Available_seats{
+    font-size: 20px;
+
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
