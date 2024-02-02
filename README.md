@@ -18,4 +18,5 @@ https://www.figma.com/file/XhMn1YuBFzHnp9yMiNWdzG/Bioskop?type=design&node-id=0%
 Skema Database
 https://drive.google.com/file/d/1vr1CzOD-eRvvZl1LU1Que4WgP9dvHanJ/view?usp=sharing
 
+memiliki fitur payment gateway
 
